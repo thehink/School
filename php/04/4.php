@@ -2,7 +2,6 @@
 
 function drawGrid($x, $y){
   $output = '<table style="border:1px solid black; border-collapse:collapse">';
-$num = 1;
   for($i = 0; $i < $y; $i++){
     $output .= '<tr>';
     for($j = 0; $j < $x; $j++){
