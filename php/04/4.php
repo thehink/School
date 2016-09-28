@@ -5,7 +5,7 @@ function drawGrid($x, $y){
   for($i = 0; $i < $y; $i++){
     $output .= '<tr>';
     for($j = 0; $j < $x; $j++){
-      $output .= sprintf('<td style="border:1px solid black;font-size:3em;">%s</td>', $j*$y+($i+1));
+      $output .= sprintf('<td style="border:1px solid black;font-size:3em;">%s</td>', $j*$y +($i+1));
     }
     $output .= '</tr>';
   }
