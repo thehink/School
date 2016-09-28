@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+</head>
+
+<body>
+<script>
+//var asd = window.prompt('Hello');
+//console.log(asd);
+
+//console.log(window.prompt('Hello'))
+
+var asd = [['asd', 'asd']];
+
+console.table(asd);
+
+console.log(Array(16).join('omg' - 1) + ' Batman!')
+
+
+function hypotenuse(a, b){
+  return a*a + b*b;
+}
+/*
+var answer = prompt('Enter value of a and b in this format: a,b');
+var ab = answer.split(',');
+console.log(hypotenuse(ab[0], ab[1]));*/
+
+function concanateStrings(a, b){
+  return a + '' + b;
+}
+
+function getStringFromTemplate(firstName, lastName){
+  return "Hello" + firstName + " " + lastName;
+}
+
+function getStringLength(str){
+  return str.length;
+}
+
+function isPrime(num){
+  if (num < 2) return true;
+  //you only need to check numbers up to square root of number.
+  var q = parseInt(Math.sqrt(num));
+    for (var i = 2; i <= q; i++)
+    {
+        if (num % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+
+function parseNumberFromString(str){
+  return parseInt(str);
+}
+
+function rectangle(width, height){
+  return {
+    height: height,
+    width: width,
+    area: width * height
+  };
+}
+
+function getCircleCircumference(radius){
+  return 2 * Math.PI * radius;
+}
+
+var num = 15485867;
+
+console.log('The number', num, isPrime(num) ? 'is' : 'is not', 'a prime');
+
+</script>
+</body>
+</html>

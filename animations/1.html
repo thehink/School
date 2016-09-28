@@ -1,0 +1,109 @@
+<html>
+<head>
+  <title>asd</title>
+  <style type="text/css">
+
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .holy-sadie{
+    position: relative;
+    width: 500px;
+    cursor: pointer;
+  }
+
+  .holy-sadie > img{
+    width: 100%;
+  }
+
+.overlay,
+.overlay h1,
+.image-footer,
+.gradient {
+  transition: margin 0.3s, opacity 0.3s, color 0.3s, background 0.3s, text-shadow 0.3s;
+}
+
+  .overlay{
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  h1{
+    margin: 25% auto 0 auto;
+    font-weight: normal;
+    font-size: 3em;
+    text-shadow: 0 1px 10px #CCC;
+    z-index: 1;
+  }
+
+  h1 > span{
+    font-weight: bold;
+  }
+
+  .image-footer{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #CCC;
+    opacity: 0;
+    z-index: 1;
+  }
+
+
+
+  .gradient{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+  }
+
+  .holy-sadie:hover .gradient{
+    opacity: 1;
+  }
+
+  .holy-sadie:hover .image-footer{
+    opacity: 1;
+    margin-bottom: 20px;
+  }
+
+  .holy-sadie:hover h1{
+    margin-top: 20%;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: none;
+  }
+
+  </style>
+</head>
+<body>
+  <main>
+    <div class="holy-sadie">
+      <img src="picture-10.jpg" alt="Holy Sadie"/>
+      <div class="overlay">
+        <div class="gradient"></div>
+        <h1>Title <span>asd</span></h1>
+        <div class="image-footer">asdasdasd</div>
+      </div>
+    </div>
+
+</main>
+</body>
+</html>

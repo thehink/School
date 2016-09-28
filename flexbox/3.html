@@ -1,0 +1,86 @@
+<html>
+<head>
+  <title>asd</title>
+  <style type="text/css">
+
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+  main{
+    column-count: 6;
+    column-gap: 1em;
+
+  }
+
+  main > div{
+    display: inline-block;
+     margin: 0 0 1em;
+    background-color: green;
+    width: 100%;
+
+  }
+
+
+  @media only screen and (max-width: 1200px) {
+      main {
+          column-count: 5;
+      }
+  }
+
+
+  @media only screen and (max-width: 1000px) {
+      main {
+          column-count: 4;
+      }
+  }
+
+  @media only screen and (max-width: 800px) {
+      main {
+          column-count: 3;
+      }
+  }
+
+  @media only screen and (max-width: 550px) {
+      main {
+          column-count: 2;
+      }
+  }
+
+  @media only screen and (max-width: 300px) {
+      main {
+          column-count: 1;
+      }
+  }
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <main>
+    <div style="height:100px"></div>
+    <div style="height:300px"></div>
+    <div style="height:100px"></div>
+    <div style="height:200px"></div>
+    <div style="height:50px"></div>
+    <div style="height:100px"></div>
+    <div style="height:100px"></div>
+    <div style="height:100px"></div>
+    <div style="height:300px"></div>
+    <div style="height:100px"></div>
+    <div style="height:100px"></div>
+    <div style="height:200px"></div>
+    <div style="height:100px"></div>
+    <div style="height:40px"></div>
+    <div style="height:500px"></div>
+    <div style="height:100px"></div>
+</main>
+</body>
+</html>

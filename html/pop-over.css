@@ -1,0 +1,138 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+Colors:
+
+Green-text: #81BD66
+header-bg: #F9F9F9
+key: #DFDFDF
+text: #333333
+link: #3D76C2
+*/
+
+body {
+
+}
+
+.verified-box{
+  position: absolute;
+  left: 300px;
+  top: 100px;
+  padding: 5px 10px;
+  border: 2px solid #E5E5E5;
+  color: #52A628;
+  border-radius: 6px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.pop-over{
+  position: absolute;
+  top: 0;
+  margin-top: 63px;
+  left: 0;
+  margin-left: -180px;
+  width: 460px;
+  color: #333333;
+  border: 1px solid #C8C8C8;
+  border-radius: 6px;
+  opacity: 0;
+  cursor:auto;
+  visibility: hidden;
+  transition: opacity 0.5s;
+  box-shadow: 0 1px 10px #CCC;
+}
+
+.verified-box:hover > .pop-over{
+  visibility: visible;
+  opacity: 1;
+}
+
+.pop-triangle{
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  margin-left:-25px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 25px 25px 25px;
+  border-color: transparent transparent #C8C8C8 transparent;
+}
+
+.background-triangle{
+  position: absolute;
+  margin-left:-24px;
+  top:1px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 24px 24px 24px;
+  border-color: transparent transparent #f9f9f9 transparent;
+}
+
+.pop-over > .pop-header{
+  padding: 20px;
+  background-color: #F9F9F9;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom: 1px solid #CCC;
+}
+
+.pop-over > .pop-header > img{
+  float: left;
+  margin-right: 20px;
+}
+
+.pop-over > .pop-header > .pop-title{
+  margin-top: 8px;
+}
+
+.verified-text{
+  font-weight: bold;
+  color: #52A628;
+}
+
+.pop-content{
+  padding: 20px;
+}
+
+.profile{
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
+.profile > img{
+  float: left;
+  margin-right: 20px;
+}
+
+.profile-name > .username{
+  font-weight: bold;
+  display: block;
+  margin-top: 1px;
+  margin-bottom: 5px;
+}
+
+.profile-name > .name{
+
+}
+
+.sign-info{
+  font-size: 21px;
+}
+
+.pgp-key{
+  color: #777777;
+}
+
+.pop-over a{
+  color: #3D76C2;
+  text-decoration: none;
+  display: block;
+}
