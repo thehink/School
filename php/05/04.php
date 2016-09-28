@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <?php
 
 $output = '';
@@ -56,6 +55,7 @@ $round = 1;
 
 ?>
 
+<!DOCTYPE HTML>
 <html>
 <head>
   <title>Fight</title>
