@@ -1,7 +1,8 @@
 function Log(){
+	var output = '';
 	for(var i = 0; i < arguments.length; ++i){
-		console.log(typeof(arguments[i]));
-		document.body.innerHTML += ' ' + (typeof(arguments[i]) == 'object' ? JSON.stringify(arguments[i], null, "\t") : arguments[i]);
+		output += ' ' + (typeof(arguments[i]) == 'object' ? JSON.stringify(arguments[i], null, 4) : arguments[i]);
 	}
-	document.body.innerHTML += '<br>';
+	output += '<br>';
+	document.body.innerHTML += output;
 }

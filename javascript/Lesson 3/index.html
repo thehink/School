@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>JavaScript</title>
   <script src="../utils.js"></script>
+  <script src="./heroes.js"></script>
   <script src="./episodes.js"></script>
   <style>
 	body { white-space: pre; font-family: monospace; }
@@ -12,14 +13,6 @@
 
 <body>
 <script>
-const heroes = [
-  { name: 'Claire Bennet', actor: 'Hayden Panettiere', villain: false },
-  { name: 'Hiro Nakamura', actor: 'Masi Oka', villain: false },
-  { name: 'Sylar', actor: 'Zachary Quinto', villain: true },
-  { name: 'Matt Parkman', actor: 'Greg Grunberg', villain: false },
-  { name: 'Peter Petrelli', actor: 'Milo Ventimiglia', villain: false },
-];
-
 Log('<b>Uppgift 1 - Output:</b>');
 for(var i = 0; i < heroes.length; ++i){
 	Log(heroes[i].name, 'is a', heroes[i].villain ? 'villain...' : 'superhero!');
