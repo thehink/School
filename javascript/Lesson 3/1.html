@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+  <script src="../utils.js"></script>
+  <script src="./episodes.js"></script>
+  <style>
+	body { white-space: pre; font-family: monospace; }
+  </style>
+</head>
+
+<body>
+<script>
+const heroes = [
+  { name: 'Claire Bennet', actor: 'Hayden Panettiere', villain: false },
+  { name: 'Hiro Nakamura', actor: 'Masi Oka', villain: false },
+  { name: 'Sylar', actor: 'Zachary Quinto', villain: true },
+  { name: 'Matt Parkman', actor: 'Greg Grunberg', villain: false },
+  { name: 'Peter Petrelli', actor: 'Milo Ventimiglia', villain: false },
+];
+
+Log('<b>Uppgift 1 - Output:</b>');
+for(var i = 0; i < heroes.length; ++i){
+	Log(heroes[i].name, 'is a', heroes[i].villain ? 'villain...' : 'superhero!');
+}
+
+Log('<br><br><b>Uppgift 2 - Output:</b>');
+var i = 0;
+while(i < heroes.length){
+	Log(heroes[i].name, 'is played by', heroes[i].actor);
+	++i;
+}
+
+
+Log('<br><br><b>Uppgift 3 - Output:</b>');
+heroes.forEach(function(hero){
+	Log(hero.name, 'is a', hero.villain ? 'villain' : 'superhero', 'and is played by', hero.actor);
+});
+
+Log('<br><br><b>Uppgift 4 - Output:</b>');
+for(var i = 0; i < episodes.length; ++i){
+	if(episodes[i].director == 'Greg Beeman' && episodes[i].year == 2007)
+		Log('The episode', episodes[i].title, 'was directed by', episodes[i].director, 'and released', episodes[i].month, episodes[i].day, episodes[i].year);
+}
+
+Log('<br><br><b>Uppgift 5 - Output:</b>');
+var i = 0;
+while(i < heroes.length){
+	if(episodes[i].director == 'Paul Shapiro'){
+		Log('The first episode directed by', episodes[i].director, 'was', episodes[i].title);
+	}else{
+		Log('The episode', episodes[i].title, 'was not directed by Paul Shapiro');
+	}
+	++i;
+}
+
+/*Uppgift 5*/
+var mapped = episodes.map(function(episode){
+	return {
+		title: episode.title,
+		director: episode.director,
+		date: episode.month + ' ' + episode.day + ' ' + episode.year
+	}
+});
+Log('<br><br><b>Uppgift Extra 1 - Output:</b>');
+Log(mapped);
+
+
+function getEpisodesByYear(episodes, year){
+	return episodes.filter(function(episode){ return episode.year == year; });
+}
+Log('<br><br><b>Uppgift Extra 2 - Output:</b>');
+Log(getEpisodesByYear(episodes, 2007));
+
+</script>
+</body>
+</html>
