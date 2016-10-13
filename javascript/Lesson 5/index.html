@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Back to the Future</title>
+    <style>
+      body { font-family: Helvetica; color: #001f3f; }
+      main { width: 90%; max-width: 900px; }
+      .heavy { font-size: 100px; background: #ffdc00; color: #fff; text-align: center; }
+      a { color: #0074D9; } a:hover { color: #fff; background: #0074D9; text-decoration: none; }
+    </style>
+
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Back to the Future</h1>
+      </header>
+
+      <article>
+        <h2 id="title">This Is Heavy</h2>
+
+        <p>Does your mom know about tomorrow night? Good morning, Mom. Oh, <span class="name">Marty</span>, I almost forgot, <span class="name">Jennifer Parker</span> called. He's alright. Hey c'mon, I had to change, you think I'm going back in that zoot suit? The <a href="https://giphy.com/gifs/film-back-to-the-future-anniversary2015-Y1aL1fxTEbhQs" art="Spooky young man">old man</a> really came through it worked. <a href="https://giphy.com/gifs/FrVlu71LVoVXy" alt="I guess you guys aren't ready for that yet">I have to tell you about the future</a>.</p>
+
+        <img src="https://i.giphy.com/hn45V8hBhRIpW.gif" alt="This Is Heavy">
+
+        <p>He's absolutely right, <span class="name">Marty</span>. the last thing you need is headaches. Well, I guess that's everything. Please note that <span class="name">Einstein's</span> clock is in complete synchronization with my control watch. Good evening, I'm Doctor <span class="name">Emmet Brown</span>, I'm standing here on the parking lot of- What did you sleep in your clothes again last night.</p>
+
+        <p>Precisely. <span class="name">George</span>, <a href="https://youtu.be/6XwNibBpDYU" alt="Back To The Future [1985] - Johnny B Goode (Original)">aren't you gonna kiss me?</a> Hey beat it, spook, this don't concern you. <a href="https://giphy.com/gifs/back-to-the-future-behind-scenes-CdAh3Sh0Mvtdu" alt="I'm flying!">Bet your ass it works.</a> Here you go, lady. There's a quarter.</p>
+      </article>
+
+      <footer>
+        <p><small>&copy; 1985 <span class="name">Robert Zemeckis</span>. All Rights Reserved.</small></p>
+      </footer>
+    </main>
+    <script>
+    'use strict';
+    document.getElementById('title').classList.add('heavy');
+
+    document.querySelectorAll('.name').forEach((element) => {
+      element.style.color = '#FFF';
+      element.style.backgroundColor = '#FF4136';
+    });
+
+    document.querySelectorAll('article .name').forEach((element) => {
+      let name = element.textContent.split(' ');
+      name[0] = 'Marty';
+      element.textContent = name.join(' ');
+    });
+
+    document.querySelectorAll('article .name').forEach((element) => {
+      let name = element.textContent.split(' ');
+      let lastname = document.createElement('span');
+      lastname.style.backgroundColor = '#0074d9';
+      lastname.textContent = name[1];
+      element.textContent = name[0] + ' ';
+      element.appendChild(lastname);
+    });
+
+    let p = document.createElement('p');
+    p.textContent = "Quiet down, I'm sure the car is fine. Well, uh, listen, uh, I really- I had a horrible nightmare, dreamed I went back in time, it was terrible. That's George McFly. No no no this sucker's electrical, but I need a nuclear reaction to generate the one point twenty-one gigawatts of electricity that I need.";
+    document.querySelector('article').appendChild(p);
+
+
+    document.querySelector('article p:last-child').remove();
+
+    let img = document.createElement('img');
+    img.src = ' https://i.giphy.com/l2SpRluqQHmApTems.gif';
+    document.querySelector('article').insertBefore(img, document.querySelector('article p:last-child'));
+
+    document.getElementById('title').addEventListener('click', (e) => {
+      e.target.classList.toggle('heavy');
+    })
+
+    </script>
+  </body>
+</html>
