@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lesson 6, Assignment 5</title>
+  <script src="../utils.js"></script>
+  <style>
+	body { white-space: pre; font-family: monospace; }
+  a {
+    display: block;
+  }
+  </style>
+</head>
+
+<body>
+<div class="links">
+</div>
+
+<script>
+'use strict';
+
+const colors = [
+  {name: 'red', hex: '#ff4136'},
+  {name: 'blue', hex: '#0074d9'},
+  {name: 'yellow', hex: '#ffdc00'},
+  {name: 'green', hex: '#2ecc40'}
+];
+
+const links = document.querySelector('.links');
+
+colors.forEach(color => {
+  let link = document.createElement('a');
+  link.innerText = color.name;
+  link.href = '#' + color.name;
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    document.body.style.backgroundColor = color.hex;
+  });
+  links.appendChild(link);
+});
+
+</script>
+</body>
+</html>
