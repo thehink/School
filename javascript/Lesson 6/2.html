@@ -48,7 +48,7 @@
     document.querySelectorAll('a.translate').forEach(element => {
       element.addEventListener('click', event => {
         event.preventDefault();
-        let confirm = window.confirm('Are you sure you want to translate Sozialismus?');
+        let confirm = window.confirm(`Are you sure you want to translate ${event.target.innerText}?`);
         if(confirm){
           window.location = event.target.href;
         }
