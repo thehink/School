@@ -12,7 +12,7 @@ function getPeopleAndGear(){
       gear.maker,
       gear.model
     FROM people
-    INNER JOIN gear
+    LEFT JOIN gear
       ON gear.people_id = people.id
   ");
 
