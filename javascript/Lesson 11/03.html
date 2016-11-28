@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LocalStorage</title>
+  </head>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    html, body{
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .cookie-consent{
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px 10px;
+      background: #382DA7;
+      color: #FFF;
+      transition: opacity 0.3s, margin-top 0.5s;
+    }
+
+    .cookie-consent.removed{
+      opacity: 0;
+      margin-top: -50px;
+    }
+
+    .cookie-consent .info{
+      font-size: 15px;
+    }
+
+    .cookie-consent > button{
+      background: #EB1473;
+      padding: 6px 15px;
+      border: none;
+      cursor: pointer;
+      color: #FFF;
+      font-size: 15px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+      outline: none;
+    }
+
+    .cookie-consent > button:hover{
+      background-image: linear-gradient(
+                          rgba(0, 0, 0, 0.05),
+                          rgba(0, 0, 0, 0.1)
+                        );
+    }
+  </style>
+  <body>
+
+
+    <script>
+    'use strict';
+
+    let acceptedCookieKey = 'acceptedCookies';
+    let accepted = localStorage.getItem(acceptedCookieKey);
+
+    class AcceptCookiePrompt {
+      constructor() {
+        this.el = document.createElement('div');
+        this.el.className = 'cookie-consent';
+
+        const info = document.createElement('span');
+              info.className = 'info';
+              info.innerText = 'This website uses cookies to ensure you get the best experience on our website.';
+
+        const button = document.createElement('button');
+              button.innerText = 'Accept';
+
+        button.addEventListener('click', event => this.accept());
+
+
+        this.el.appendChild(info);
+        this.el.appendChild(button);
+        document.body.appendChild(this.el);
+      }
+
+      accept() {
+        this.el.classList.add('removed');
+        localStorage.setItem(acceptedCookieKey, 'accepted');
+        setTimeout(() => {
+          this.el.remove();
+        }, 1000);
+      }
+    }
+
+    if(!accepted){
+      new AcceptCookiePrompt();
+    }
+
+    </script>
+  </body>
+</html>

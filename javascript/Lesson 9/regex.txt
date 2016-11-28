@@ -1,0 +1,25 @@
+https://regexone.com/problem/matching_decimal_numbers
+Solution: -?(\d+[.e,]?)+$
+
+https://regexone.com/problem/matching_phone_numbers?
+Solution: (1 |\((\d+)\))?(\d{3})(-| |)(\d+)(-| |)(\d+)
+Solution2: (1 |\((\d+)\))?(\d{3})((-| |)(\d+)){2}
+Solution4: (1 |\((\d+)\))?(\d{3})((-| |)(\d{3,4})){1,2}
+
+https://regexone.com/problem/matching_emails?
+Solution: (([^+]+)\S+)@\S+
+
+https://regexone.com/problem/matching_html?
+Solution:<([a-z]+)([^>]+)?>
+
+https://regexone.com/problem/matching_filenames?
+Solution: ^(\w+)\.(gif|jpg|png)$
+
+https://regexone.com/problem/trimming_whitespace?
+Solution: (\S[A-z .]+)
+
+https://regexone.com/problem/extracting_log_data?
+Solution \.([^(.]+)\(([^:]+):(\d+)\)
+
+https://regexone.com/problem/extracting_url_data?
+Solution: ([^:]+)://([A-z0-9-.]+)(:(\d+))?

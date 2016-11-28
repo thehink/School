@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LocalStorage</title>
+  </head>
+  <body>
+
+    <script>
+    'use strict';
+    const characters = [
+      'Alistair Hennessey',
+      'Anne-Marie Sakowitz',
+      'Bill Ubell',
+      'Eleanor Zissou',
+      'Jane Winslett-Richardson',
+      'Klaus Daimler',
+      'Ned Plimpton',
+      'Oseary Drakoulias',
+      'Pelé dos Santos',
+      'Steve Zissou',
+      'Vikram Ray',
+      'Vladimir Wolodarsky',
+    ];
+
+    localStorage.setItem('characters', JSON.stringify(characters));
+    console.log(JSON.parse(localStorage.getItem('characters')));
+    </script>
+  </body>
+</html>
