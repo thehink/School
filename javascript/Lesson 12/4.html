@@ -9,7 +9,7 @@
     const lyrics = 'One more time we\'re gonna celebrate. Oh yeah all right don\'t stop the dancing. One more time we\'re gonna celebrate. Oh yeah all right don\'t stop the dancing.';
 
     String.prototype.words = function(count){
-      return this.split(' ').filter((e, i) => i < count).join(' ');
+      return this.split(' ').slice(0, count).join(' ');
     };
 
     console.log(lyrics.words(6)); // One more time we're gonna celebrate.
