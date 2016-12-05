@@ -1,0 +1,10 @@
+ErrorDocument 404 /404.php
+
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile D:\htdocs\School\php\13\.htpasswd
+Require valid-user
+
+RewriteEngine on
+RewriteRule ^home$ index.php
+RewriteRule ^profile/([A-z0-9-]+)/?$ profile?user=$1

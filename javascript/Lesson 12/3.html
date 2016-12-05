@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Album</title>
+  </head>
+  <body>
+    <script>
+    function Album(title, artist, year){
+      this.title = title;
+      this.artist = artist;
+      this.year = year;
+    }
+
+
+    Album.prototype.description = function(){
+      return `The ${this.title} by ${this.artist} was released back in ${this.year}`;
+    }
+
+    const album = new Album('Discovery', 'Daft Punk', 2001);
+    console.log(album.description());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Album</title>
+  </head>
+  <body>
+    <script>
+    class Album {
+      constructor(title, artist, year) {
+        this.title = title;
+        this.artist = artist;
+        this.year = year;
+      }
+
+      description(){
+        return `The ${this.title} by ${this.artist} was released back in ${this.year}`;
+      }
+    }
+
+
+    const album = new Album('Human After All', 'Daft Punk', 2005);
+
+    console.log(album.description()); // The Human After All album by Daft Punk was released back in 2005.
+    </script>
+  </body>
+</html>

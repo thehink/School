@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 1</title>
+  </head>
+  <body>
+<script>
+
+String.prototype.slug = function(){
+  return this.replace(/ /g, '-').toLowerCase();
+}
+
+const song = 'Harder Better Faster Stronger';
+console.log(song.slug()); // harder-better-faster-stronger
+
+</script>
+  </body>
+</html>
